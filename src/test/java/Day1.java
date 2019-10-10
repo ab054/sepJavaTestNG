@@ -1,4 +1,3 @@
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 import org.testng.annotations.Test;
 
 import java.util.Arrays;
@@ -92,10 +91,13 @@ public class Day1 {
 
     @Test
     public void testNumbersInArray() {
-        int[] arrayOfInt = {1,3,3,4,5,6,7,8,9,9};
+        int[] arrayOfInt = {1 , 3, 3, 4, 5, 6, 7, 8, 9, 10};
 
         for(int i=0; i < arrayOfInt.length; i++){
             System.out.println(arrayOfInt[i]);
         }
     }
+
+
+
 }
