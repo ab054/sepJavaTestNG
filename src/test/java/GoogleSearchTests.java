@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class GoogleSearchTests {
@@ -21,13 +22,14 @@ public class GoogleSearchTests {
     }
 
 
+    @Parameters({ "testDataQuery" })
     @Test
-    public void test0001() {
+    public void test0001(String param1) {
         System.setProperty("webdriver.gecko.driver", "C:\\Users\\barab\\IdeaProjects\\sepJavaTestNG\\src\\test\\resources\\drivers\\geckodriver.exe");
 
         openBrowser();
         navigateToMainPage();
-        typeQuory();
+        typeQuory(param1);
         submitSearch();
         waitForResultsElement();
         assertResultsPage();
@@ -56,10 +58,10 @@ public class GoogleSearchTests {
         driver.findElement(By.cssSelector(selector)).submit();
     }
 
-    private void typeQuory() {
+    private void typeQuory(String quoryToType) {
         String selector = "#tsf > div:nth-child(2) > div.A8SBwf > div.RNNXgb > div > div.a4bIc > input";
         WebElement webElement = driver.findElement(By.cssSelector(selector));
-        webElement.sendKeys("Portnov Computer School");
+        webElement.sendKeys(quoryToType);
     }
 
     private void navigateToMainPage() {

@@ -1,0 +1,28 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="CheckBoxesSuite" verbose="1" >
+
+    <test name="Firefox" >
+        <parameter name="testDataQuery"  value="Portnov Computer School"/>
+        <classes>
+            <class name="GoogleSearchTests">
+                <methods>
+                    <include name="test0001"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+    <test name="Chrome" >
+        <parameter name="testDataQuery"  value="Portnov"/>
+        <classes>
+            <class name="GoogleSearchTests">
+                <methods>
+                    <include name="test0001"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>
