@@ -5,7 +5,7 @@
     <test name="Firefox" >
         <parameter name="testDataQuery"  value="Portnov Computer School"/>
         <classes>
-            <class name="GoogleSearchTests">
+            <class name="googlesearchuitests.GoogleSearchTests">
                 <methods>
                     <include name="test0001"/>
                 </methods>
@@ -17,7 +17,7 @@
     <test name="Chrome" >
         <parameter name="testDataQuery"  value="Portnov"/>
         <classes>
-            <class name="GoogleSearchTests">
+            <class name="googlesearchuitests.GoogleSearchTests">
                 <methods>
                     <include name="test0001"/>
                 </methods>

@@ -1,3 +1,5 @@
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
 
 import java.util.Arrays;
@@ -58,5 +60,10 @@ public class CodingEx {
         if(movie.isReleased()){
             movie.watch();
         }
+    }
+
+    @Test
+    public void testFirefoxDriver() {
+        WebDriver driver = new FirefoxDriver();
     }
 }
